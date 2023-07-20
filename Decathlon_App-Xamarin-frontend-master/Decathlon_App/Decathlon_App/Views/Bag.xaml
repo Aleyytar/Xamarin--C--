@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decathlon_App.Views.Bag"
+             BackgroundColor="WhiteSmoke">
+    <Shell.TitleView>
+        <Label Text="Sepetim" FontSize="15" FontAttributes="bold"  TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <Grid Margin="0,20,0,0">
+                    <Image Source="decathlon_yeni.jpg" Margin="20,-8,0,0" WidthRequest="100"  HorizontalOptions="Start"/>
+                    <Image Source="question.png" Margin="160,-8,0,0" WidthRequest="30" HorizontalOptions="Start"/>
+                    <Image Source="lock.png" Margin="0,-12,45,0" WidthRequest="30" HorizontalOptions="End"/>
+                    <ImageButton Source="user.png" Margin="0,-14,110,0" WidthRequest="35" Clicked="GotoAccount" HorizontalOptions="End"/>
+                    <Label Text="GUVENLI." Margin="0,30,15,0" HorizontalOptions="End" TextColor="Black" FontSize="12"></Label>
+                    <Label Text="%100" Margin="0,10,10,0" HorizontalOptions="End" TextColor="Blue" FontSize="14"></Label>
+                    <Label Text="HESABIM" Margin="135,30,0,0" HorizontalOptions="Center" TextColor="Black" FontSize="12"></Label>
+                </Grid>
+                <Button Text=" ALIŞVERİŞE DEVAM ET" TextColor="White" BackgroundColor="Black" FontSize="14" Margin="0,0,0,0" HeightRequest="35"></Button>
+                <Label Text= "1. SEPET" FontSize="Large" TextColor="Black" Margin="10,30,0,50" ></Label>
+                <Label Text="--------------------------------------------------------------------------------------------- " TextColor="LightGray" Margin="10,-60,0,50" ></Label>
+                <BoxView Color="White"
+                    CornerRadius="1"
+                    WidthRequest="350"
+                    HeightRequest="300"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,-30,0,0"/>
+                <Image Source="Sepet_resim.png" Margin="10,-270,0,0"></Image>
+                <Label Text="  Sepetiniz boş" FontSize="17" TextColor="Black" Margin="140,20,0,50" ></Label>
+                <Button Text="   ALIŞVERİŞE DEVAM ET" FontAttributes="Bold" BackgroundColor="LightGray" TextColor="Black" FontSize="15" WidthRequest="240" HeightRequest="40" HorizontalOptions="Center" Margin="20,-20,20,0"></Button>
+                <Label Text="--------------------------------------------------------------------------------------------- " TextColor="LightGray" Margin="10,60,0,20"></Label>
+                <Label Text="Daha sonra satın al (Dilediğiniz zaman sepetinize ekleyebilirsiniz)" Margin="10,0,0,50" FontSize="16" TextColor="Black"/>
+                <BoxView Color="LightGray"
+                    CornerRadius="1"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,-20,0,0"/>
+                <Label Text="DAHA SONRA SATIN AL" FontAttributes="Bold" Margin="40,-45,0,0" FontSize="14" TextColor="Black"/>
+                <BoxView Color="White"
+                    CornerRadius="1"
+                    WidthRequest="350"
+                    HeightRequest="150"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,0"/>
+                <Label Text="Daha sonra satın al alanına eklenmiş bir        ürününüz yok." FontSize="15" TextColor="Black" Margin="50,-110,0,160" HorizontalOptions="CenterAndExpand"/>
+                <BoxView Color="LightGray"
+                    CornerRadius="1"
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,-20,0,0"/>
+                <Label Text="SİPARİŞ ÖZETİ" Margin="20,-45,0,0" FontSize="15" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+                <BoxView Color="White"
+                    CornerRadius="1"
+                    WidthRequest="350"
+                    HeightRequest="250"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,-100"/>
+                <Label Text="Ara toplam" FontSize="15" TextColor="Black" Margin="50,-130,0,0" HorizontalOptions="Start"/>
+                <Label Text="₺0" FontSize="13" TextColor="Black" Margin="0,-25,50,18" HorizontalOptions="End"/>
+                <Button Text="KUPON KODU KULLAN" BackgroundColor ="White" TextColor="Blue" BorderWidth="1" BorderColor="Blue" Margin="50,0,0,0" HeightRequest="35" WidthRequest="200" HorizontalOptions="Start"/>
+                <ImageButton Source="question.png" Margin="0,-40,35,12" WidthRequest="25" HeightRequest="25" HorizontalOptions="End"/>
+                <Label Text="----------------------------------------------------------------------------------------" HorizontalOptions="Center" TextColor="LightGray"/>
+                <Label Text="SİPARİŞ TOPLAMI" FontSize="15" TextColor="Black" FontAttributes="Bold" Margin="40,0,0,0"/>
+                <Label Text="₺0" FontSize="13" FontAttributes="Bold" TextColor="Black" Margin="0,-22,50,0" HorizontalOptions="End"/>
+                <Label Text="----------------------------------------------------------------------------------------" HorizontalOptions="Center" TextColor="LightGray" Margin="0,0,0,100"/>
+                <Button Text="SEPETİ ONAYLA   >" Margin="0,0,0,0" TextColor="Gray" BackgroundColor="Yellow"  HorizontalOptions="Center" FontSize="16" HeightRequest="60" WidthRequest="400"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

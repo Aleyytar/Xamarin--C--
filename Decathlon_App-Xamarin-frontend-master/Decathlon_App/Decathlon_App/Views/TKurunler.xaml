@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="Decathlon_App.Views.TKurunler">
+    <Shell.TitleView>
+        <Label Text="TÜM KAMP ÜRÜNLERİ" FontSize="20" FontAttributes="bold"  TextColor="Black"  HorizontalOptions="CenterAndExpand" Margin="40,-100,0,0"/>
+    </Shell.TitleView>
+    
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Button        
+                 Text="↑↓Akıllı Sıralama"
+                 TextColor="Black"
+                 TextTransform="None"
+                 BackgroundColor="White"
+                 BorderColor="Black"
+                 BorderWidth="1"
+                 CornerRadius="2"           
+                 HeightRequest="40"          
+                 WidthRequest="20"
+                Margin="10,10,200,0"            
+            ></Button>
+            <Button             
+                 Text="Filtrele"
+                 TextColor="Black"
+                 TextTransform="None"
+                 BackgroundColor="White"
+                 BorderColor="Black"
+                 BorderWidth="1"
+                 CornerRadius="2"           
+                 HeightRequest="40"          
+                 WidthRequest="20"
+                 Margin="200,-46,10,0"                       
+            ></Button>
+            <flv:FlowListView FlowColumnCount="2"   
+                SeparatorVisibility="Default"   
+                HasUnevenRows="True"  
+                FlowItemTappedCommand="{Binding ItemTappedCommand}"   
+                FlowItemsSource="{Binding Items}">
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+
+                        <Frame BackgroundColor="White"  Margin="5">
+                            <StackLayout>
+                                <Image
+                                     Source="{Binding ImageSource}"
+                                    Margin="0,0,0,0"
+                                    WidthRequest="150"
+                                    HeightRequest="150"/>
+                                     
+                                <Label
+                                   FontAttributes="Bold"
+                                   FontSize="17"
+                                   HorizontalOptions="Fill"   
+                                   VerticalOptions="Fill"   
+                                   TextColor="Black"  
+                                   XAlign="Center"  
+                                   YAlign="Center"  
+                                   Text="{Binding UrunIsim}"/>
+                                <Label
+                                    FontSize="14"
+                                   HorizontalOptions="Start"   
+                                   VerticalOptions="Start"   
+                                   TextColor="Black"  
+                                   XAlign="Center"  
+                                   YAlign="Center"  
+                                   Text="{Binding UrunDetay}"/>
+                                <Label
+                                   FontSize="17"
+                                   FontAttributes="Bold"                                  
+                                   HorizontalOptions="Start"   
+                                   VerticalOptions="Start"   
+                                   TextColor="Black"  
+                                   XAlign="Center"  
+                                   YAlign="Center"  
+                                   Text="{Binding UrunFiyat }"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
